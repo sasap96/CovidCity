@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.etfbl.application.Controller">
+   <left>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="228.0" prefWidth="83.0" spacing="5.0" style="-fx-background-color: DarkSeaGreen;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="omoguciKretanje" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#omoguciKretanje" prefHeight="47.0" prefWidth="83.0" text="OMOGUĆI KRETANJE" textAlignment="CENTER" textFill="#1fae0f" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="zaustavi" alignment="CENTER" mnemonicParsing="false" onAction="#zaustaviSimulaciju" prefHeight="47.0" prefWidth="83.0" text=" ZAUSTAVI SIMULACIJU" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="pokreni" alignment="CENTER" mnemonicParsing="false" onAction="#pokreniSimulaciju" prefHeight="47.0" prefWidth="83.0" text=" POKRENI PONOVO" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="zavrsi" alignment="CENTER" mnemonicParsing="false" onAction="#zavrsiSimulaciju" prefHeight="47.0" prefWidth="83.0" text="ZAVRŠI SIMULACIJU" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label prefHeight="66.0" prefWidth="73.0" text="Broj zarazenih" textAlignment="CENTER" textFill="#f01111" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="brojZarazenih" prefHeight="40.0" prefWidth="26.0" text="0" textAlignment="CENTER" textFill="#f01111">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="31.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="228.0" prefWidth="83.0" spacing="5.0" style="-fx-background-color: DarkSeaGreen;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="stanjeAmbulanti" alignment="CENTER" mnemonicParsing="false" onAction="#pregledStanjaAmbulanti" prefHeight="47.0" prefWidth="83.0" text="PREGLEDAJ STANJE AMBULANTE" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="statistika" alignment="CENTER" mnemonicParsing="false" onAction="#pregledajStatistickePodatke" prefHeight="47.0" prefWidth="83.0" text="PREGLEDAJ STATISTIČKE PODATKE" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="posaljiVozilo" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#posaljiAmbulantnoVozilo" prefHeight="47.0" prefWidth="83.0" text="POŠALJI AMBULANTNO VOZILO" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label prefHeight="47.0" />
+            <Label prefHeight="66.0" prefWidth="73.0" text="Broj oporavljenih" textAlignment="CENTER" textFill="#3613f0" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="brojOporavljenih" prefHeight="40.0" prefWidth="26.0" text="0" textAlignment="CENTER" textFill="#3613f0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="31.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <bottom>
+      <ScrollPane fx:id="tabela" prefHeight="110.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <content>
+            <SplitPane dividerPositions="0.5, 0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+               <items>
+                  <VBox fx:id="stanovnici" minWidth="-Infinity" prefWidth="300.0" />
+                  <VBox fx:id="odabrani" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="170.0" />
+                  <VBox fx:id="zarazeni" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="300.0" />
+               </items>
+            </SplitPane>
+         </content>
+      </ScrollPane>
+   </bottom>
+</BorderPane>

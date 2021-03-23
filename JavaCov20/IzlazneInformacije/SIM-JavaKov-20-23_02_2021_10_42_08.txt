@@ -1,0 +1,9 @@
+Trenutno zarazenih: 1
+Ukupno Zarazenih: 1
+Broj oporavljenih: 0
+Broj stanovnika: 24
+Broj ambulantnih vozila: 4
+Broj kuca: 8
+Broj ambulantni: 4
+Broj punktova: 8
+Vrijeme trajanja simulacije: 7.3482939

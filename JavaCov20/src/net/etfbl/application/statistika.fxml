@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.etfbl.application.Controller">
+   <left>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="228.0" prefWidth="83.0" spacing="5.0" style="-fx-background-color: DarkSeaGreen;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="start" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startSimulation" prefHeight="47.0" prefWidth="83.0" text="OMOGUĆI KRETANJE" textAlignment="CENTER" textFill="#1fae0f" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="pause" alignment="CENTER" mnemonicParsing="false" onAction="#pauseSimulation" prefHeight="47.0" prefWidth="83.0" text=" ZAUSTAVI SIMULACIJU" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="play" alignment="CENTER" mnemonicParsing="false" onAction="#playSimulation" prefHeight="47.0" prefWidth="83.0" text=" POKRENI PONOVO" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="stop" alignment="CENTER" mnemonicParsing="false" onAction="#quit" prefHeight="47.0" prefWidth="83.0" text="ZAVRŠI SIMULACIJU" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="83.0" spacing="5.0" style="-fx-background-color: DarkSeaGreen;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="state" alignment="CENTER" mnemonicParsing="false" onAction="#ambulanceData" prefHeight="47.0" prefWidth="83.0" text="PREGLEDAJ STANJE AMBULANTE" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="stats" alignment="CENTER" mnemonicParsing="false" onAction="#showStats" prefHeight="47.0" prefWidth="83.0" text="PREGLEDAJ STATISTIČKE PODATKE" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="ambulance" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#callAmbulance" prefHeight="47.0" prefWidth="73.0" text="POŠALJI AMBULANTNO VOZILO" textAlignment="CENTER" textFill="#1fae0f" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </right>
+   <bottom>
+      <ScrollPane fx:id="table" prefHeight="110.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <content>
+            <SplitPane dividerPositions="0.5, 0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+               <items>
+                  <VBox fx:id="citizens" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" />
+                  <VBox fx:id="chosen" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" />
+                  <VBox fx:id="infected" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" />
+               </items>
+            </SplitPane>
+         </content>
+      </ScrollPane>
+   </bottom>
+</BorderPane>
